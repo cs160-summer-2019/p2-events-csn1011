@@ -41,7 +41,23 @@
 <script type="text/javascript">
 
 	// your solution here
-
+  
+var flag = true;
+function foo(){
+    if (flag){
+         $(".shape-container").append("<div class='p2-circle bg-blue'> </div>")
+        setTimeout(foo, 1000);
+    }
+}
+setTimeout(foo, 1000);
+  $(document).ready(function(){
+  $(".btn").click(function(){
+    stop()
+  });
+});
+function stop(){
+    flag = false;
+}
 </script>
 </body>
 </html>
